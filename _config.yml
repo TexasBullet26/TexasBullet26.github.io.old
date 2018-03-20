@@ -85,7 +85,7 @@ social:
 analytics:
   provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : UA-99924733-3
+    tracking_id          : "UA-99924733-3"
 
 
 # Site Author
@@ -190,9 +190,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-archives
   - jekyll-seo-tag
-  - jekyll/tagging
   - jekyll-tagging-related_posts
-  - jekyll/figure
   - jekyll-algolia
   - jekyll-paginate-v2
   - jekyll-typogrify
@@ -207,9 +205,7 @@ whitelist:
   - jekyll-remote-theme
   - jekyll-archives
   - jekyll-seo-tag
-  - jekyll/tagging
   - jekyll-tagging-related_posts
-  - jekyll/figure
   - jekyll-algolia
   - jekyll-paginate-v2
   - jekyll-typogrify
