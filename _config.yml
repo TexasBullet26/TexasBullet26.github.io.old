@@ -93,7 +93,7 @@ author:
   name             : "Glenn Lanzer III"
   uri              : "https://TexasBullet26.github.io/about/"
   url              : "https://TexasBullet26.github.io/about/"
-  avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-pic.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a fullstack web developer located near Dallas, TX. I am currently available for hire and looking for clients. If you like what you see and are interested in me building your website, or anything related, to your customizations, fell free to [contact me](https://TexasBullet26.github.io/contact/)"
   location         : "Denton, TX"
   email            : "lanzertrey@gmail.com"
@@ -105,9 +105,9 @@ author:
   google_plus      : "lanzertrey"
   instagram        : "treylanzer"
   linkedin         : "glenn-lanzer" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
-  soundcloud       : "texasbullet26"
-  stackoverflow    : "7509354/texasbullet-26" # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  tumblr           : "texasbullet26"
+  # soundcloud       : "texasbullet26"
+  # stackoverflow    : "7509354/texasbullet-26" # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
+  # tumblr           : "texasbullet26"
   twitter          : "LanzerTrey26"
   # youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
@@ -140,7 +140,7 @@ keep_files:
   - .svn
 include:
   - .htaccess
-  - _pages
+  - ["_pages"]
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -187,6 +187,14 @@ timezone: America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_ti
 
 #  Plugins (previously gems:)
 plugins:
+  # - jekyll
+  - commonmarker
+  - jekyll-sass-converter
+  - html-pipeline
+  - jekyll-avatar
+  # - jekyll-github-metadata
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
   - jekyll-remote-theme
   - jekyll-archives
   - jekyll-seo-tag
@@ -199,9 +207,19 @@ plugins:
   - jekyll-feed
   - jekyll-data
   - jemoji
+  - kramdown
+  - liquid
 
 # mimic GitHub Pages with --safe
 whitelist:
+  # - jekyll
+  - commonmarker
+  - jekyll-sass-converter
+  - html-pipeline
+  - jekyll-avatar
+  # - jekyll-github-metadata
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
   - jekyll-remote-theme
   - jekyll-archives
   - jekyll-seo-tag
@@ -214,6 +232,8 @@ whitelist:
   - jekyll-feed
   - jekyll-data
   - jemoji
+  - kramdown
+  - liquid
 
 # Archives
 #  Type
@@ -233,10 +253,10 @@ tag_archive:
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
-  enabled:
+  enabled: true
     []
-    # - categories
-    # - tags
+    - categories
+    - tags
   layouts:
     category: "archive-taxonomy"
     tag: "archive-taxonomy"
@@ -258,8 +278,8 @@ compress_html:
 collections:
   portfolio:
     output: true
-    permalink: /:collection/:path/
-    title: Portfolio
+    permalink: "/:collection/:path/"
+    title: "Portfolio"
 
 # Front Matter Defaults
 defaults:
@@ -269,7 +289,7 @@ defaults:
       type: posts
     values:
       layout: single # posts will use the single layout
-      category: articles
+      category: posts
       author_profile: true
       read_time: true # enable reading time
       support: true
@@ -280,7 +300,7 @@ defaults:
         cover: true
       breadcrumbs:
         - label: "Blog Articles"
-          url: /articles/
+          url: /posts/
   # TIL (Today I Learned)
   - scope:
       path: "" # _posts/til
@@ -310,11 +330,11 @@ defaults:
           url: /portfolio/
   # Pages
   - scope:
-      path: _pages
+      path: ""
       type: pages
     values:
-      layout: page
-      # author_profile: true
+      layout: single
+      author_profile: true
 
 # Plugin: Pagination (jekyll-paginate-v2)
 pagination:
@@ -340,24 +360,24 @@ autopages:
       mode: raw
       cased: true
     layouts:
-      - "autopage_tags.html"
+      - "single.html"
     title: ":tag" # :tag is replaced by the tag name
     permalink: "/tag/:tag"
 
 # Plugin: Jekyll Algolia
-algolia:
-  application_id: #
-  index_name: #
-  search_only_api_key: #
-  nodes_to_index: "p"
-  files_to_exclude:
-    - index.html
-    - index.md
-    - excluded-file.html
-    - _pages/404.md
-    - _pages/articles.md
-    - _pages/faqs.md
-    - _pages/sitemap.md
-    - _pages/tag.md
-    - _pages/til.md
-    - _pages/work.md
+# algolia:
+ # application_id: #
+  # index_name: #
+  # search_only_api_key: #
+  # nodes_to_index: "p"
+  # files_to_exclude:
+    # - index.html
+    # - index.md
+    # - excluded-file.html
+    # - _pages/404.md
+    # - _pages/articles.md
+    # - _pages/faqs.md
+    # - _pages/sitemap.md
+    # - _pages/tag.md
+    # - _pages/til.md
+    # - _pages/work.md
