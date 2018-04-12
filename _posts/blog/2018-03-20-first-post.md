@@ -1,15 +1,17 @@
 ---
+layout: single
 title: "My First Post in Archives"
 excerpt: "My first jekyll blog post"
-image:
-  cover: true
-  path: &image /assets/images/bio-pic.jpg
-  feature: *image
-  thumbnail: /assets/images/bio-pic.jpg
-categories:
-  - Random
+#image:
+  #cover: true
+  #path: &image /assets/images/bio-pic.jpg
+  #feature: *image
+  #thumbnail: /assets/images/bio-pic.jpg
+#categories:
+  #- Random
 tags: [Jekyll, GitHub, First Post]
 comments: true
+date: 2018-03-20
 last_modified_at:
 ---
 
