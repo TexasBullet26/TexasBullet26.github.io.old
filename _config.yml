@@ -278,63 +278,72 @@ compress_html:
 collections:
   portfolio:
     output: true
-    permalink: "/:collection/:path/"
-    title: "Portfolio"
+    permalink: /:collection/:path/
+    title: Portfolio
+  til:
+    output: true
+    permalink: /:collection/:path/
+    title: Today I Learned
+  
 
 # Front Matter Defaults
 defaults:
-  # _posts / Blog Articles in _posts subdirectory
+  # Blog Articles
   - scope:
-      path: ""
+      path: _posts/blog
       type: posts
     values:
       layout: single # posts will use the single layout
       category: posts
-      author_profile: true
       read_time: true # enable reading time
-      support: true
-      comments: # true # enable comments
-      share: true # enable social sharing links 
-      related: true # enable related posts
-      image:
-        cover: true
+      #comments: # true # enable comments
+      #share: true # enable social sharing links 
+      #related: true # enable related posts
+      #image:
+        #cover: true
       breadcrumbs:
         - label: "Blog Articles"
-          url: /posts/
+          url: /blog/
   # TIL (Today I Learned)
   - scope:
-      path: "" # _posts/til
+      path: _posts/til
       type: posts
     values:
-      layout: post
+      layout: single
       category: til
       read_time: true
       comments: true
-      support: true
-      share: true
-      related: true
+      #share: true
+      #related: true
       breadcrumbs:
         - label: "Today I Learned"
           url: /til/
-  # Projects
+  # Projects (posts and collection)
   - scope:
-      path: ""
-      type: portfolio
+      path: _posts/portfolio
+      type: posts
     values:
       layout: single
-      author_profile: false
-      share: true
       category: portfolio
       breadcrumbs:
         - label: "Portfolio"
           url: /portfolio/
-  # Pages
   - scope:
-      path: ""
+      path: _portfolio
+      type: portfolio
+    values:
+      layout: collection
+      category: portfolio
+      breadcrumbs:
+        - label: "Portfolio"
+          url: /portfolio/
+  # _pages
+  - scope:
+      path: _pages
       type: pages
     values:
       layout: single
-      author_profile: true
+      #author_profile: true
 
 # Plugin: Pagination (jekyll-paginate-v2)
 pagination:
