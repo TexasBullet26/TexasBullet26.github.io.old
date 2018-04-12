@@ -1,4 +1,5 @@
 ---
+layout: splash
 title: "About Me"
 permalink: "/about/"
 excerpt: "Everything about myself, including my hobbies to my professions."
