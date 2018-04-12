@@ -1,15 +1,15 @@
 # main links
 main:
   - title: "About"
-    url: https://TexasBullet26.github.io/about/
+    url: /about/
   - title: "Blog"
-    url: https://TexasBullet26.github.io/posts/
+    url: /blog/
   - title: "Portfolio"
-    url: https://TexasBullet26.github.io/portfolio/
-  - title: "TIL"
-    url: https://TexasBullet26.github.io/til/
+    url: /portfolio/
+  - title: "Today I Learned"
+    url: /til/
   - title: "Contact"
-    url: https://TexasBullet26.github.io/contact/
+    url: /contact/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
