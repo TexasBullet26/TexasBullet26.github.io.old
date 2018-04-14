@@ -94,7 +94,7 @@ author:
   uri              : "https://TexasBullet26.github.io/about/"
   url              : "https://TexasBullet26.github.io/about/"
   avatar           : "/assets/images/bio-pic.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a fullstack web developer located near Dallas, TX. I am currently available for hire and looking for clients. If you like what you see and are interested in me building your website, or anything related, to your customizations, fell free to [contact me](https://TexasBullet26.github.io/contact/)"
+  bio              : "I am a fullstack web developer located near Dallas, TX. I am currently available for hire and looking for clients. If you like what you see and are interested in me building your website, or anything related, to your customizations, feel free to contact me!"
   location         : "Denton, TX"
   email            : "lanzertrey@gmail.com"
   uri              : "https://TexasBullet26.github.io"
@@ -140,7 +140,7 @@ keep_files:
   - .svn
 include:
   - .htaccess
-  - ["_pages"]
+  - _pages
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -192,7 +192,7 @@ plugins:
   - jekyll-sass-converter
   - html-pipeline
   - jekyll-avatar
-  # - jekyll-github-metadata
+  - jekyll-github-metadata
   - jekyll-relative-links
   - jekyll-titles-from-headings
   - jekyll-remote-theme
@@ -217,7 +217,7 @@ whitelist:
   - jekyll-sass-converter
   - html-pipeline
   - jekyll-avatar
-  # - jekyll-github-metadata
+  - jekyll-github-metadata
   - jekyll-relative-links
   - jekyll-titles-from-headings
   - jekyll-remote-theme
@@ -284,10 +284,24 @@ collections:
     output: true
     permalink: /:collection/:path/
     title: Today I Learned
-  
+  year-archive:
+    output: true
+    #permalink: /:collection/:path/
+    title: Posts by Year
 
 # Front Matter Defaults
 defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
   # Blog Articles
   - scope:
       path: _posts/blog
@@ -319,31 +333,31 @@ defaults:
         - label: "Today I Learned"
           url: /til/
   # Projects (posts and collection)
-  - scope:
-      path: _posts/portfolio
-      type: posts
-    values:
-      layout: single
-      category: portfolio
-      breadcrumbs:
-        - label: "Portfolio"
-          url: /portfolio/
-  - scope:
-      path: _portfolio
-      type: portfolio
-    values:
-      layout: collection
-      category: portfolio
-      breadcrumbs:
-        - label: "Portfolio"
-          url: /portfolio/
+  #- scope:
+      #path: _posts/portfolio
+      #type: posts
+    #values:
+      #layout: single
+      #category: portfolio
+      #breadcrumbs:
+        #- label: "Portfolio"
+          #url: /portfolio/
+  #- scope:
+      #path: _portfolio
+      #type: portfolio
+    #values:
+      #layout: collection
+      #category: portfolio
+      #breadcrumbs:
+        #- label: "Portfolio"
+          #url: /portfolio/
   # _pages
   - scope:
-      path: _pages
+      path: ""
       type: pages
     values:
       layout: single
-      #author_profile: true
+      author_profile: true
 
 # Plugin: Pagination (jekyll-paginate-v2)
 pagination:
@@ -360,9 +374,9 @@ pagination:
 autopages:
   enabled: true
   categories:
-    enabled: false
+    enabled: true
   collections:
-    enabled: false
+    enabled: true
   tags:
     enabled: true
     slugify:
@@ -372,6 +386,10 @@ autopages:
       - "single.html"
     title: ":tag" # :tag is replaced by the tag name
     permalink: "/tag/:tag"
+
+links:
+- title: Blog
+  url: /blog/
 
 # Plugin: Jekyll Algolia
 # algolia:
