@@ -42,7 +42,7 @@ reCaptcha:
   secret                 : "q0dgxcNln6DrFdDziU2JEgF3DAZJXAqtQ/XumFFKhxdacuvnXQGEgOnDZyIBk1xF+zKKUA+Bw6thoz4hCnp8yN45k8o2vtjPbQwMWrI2wIAeNDb7GMjD01mTEssE7eY5cG3C5+hlCXLUnflePf1Mgy9FPl+esKYF56thZlpOVew="
 
 atom_feed:
-  path                   : "https://TexasBullet26.github.io/atom.xml" # blank (default) uses feed.xml
+  path                   : "https://TexasBullet26.github.io/feed.xml" # blank (default) uses feed.xml
 
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
@@ -76,9 +76,10 @@ social:
   name                   : "Glenn Lanzer III" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://twitter.com/LanzerTrey26"
+    - "https://github.com/TexasBullet26"
+    - "https://medium.com/LanzerTrey26"
     - "https://www.facebook.com/trey.lanzer"
     - "https://www.instagram.com/treylanzer/"
-    - "https://github.com/TexasBullet26"
     - "https://plus.google.com/u/0/+lanzertrey/posts"
 
 # Analytics
@@ -94,7 +95,7 @@ author:
   uri              : "https://TexasBullet26.github.io/about/"
   url              : "https://TexasBullet26.github.io/about/"
   avatar           : "/assets/images/bio-pic.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a fullstack web developer located near Dallas, TX. I am currently available for hire and looking for clients. If you like what you see and are interested in me building your website, or anything related, to your customizations, feel free to contact me!"
+  bio              : "I am a fullstack web developer located near Dallas, TX. I am currently available for hire and looking for clients. If you like what you see and are interested in working together, feel free to contact me."
   location         : "Denton, TX"
   email            : "lanzertrey@gmail.com"
   uri              : "https://TexasBullet26.github.io"
@@ -105,6 +106,7 @@ author:
   google_plus      : "lanzertrey"
   instagram        : "treylanzer"
   linkedin         : "glenn-lanzer" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  medium           : "LanzerTrey26"
   # soundcloud       : "texasbullet26"
   # stackoverflow    : "7509354/texasbullet-26" # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   # tumblr           : "texasbullet26"
